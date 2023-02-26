@@ -5,28 +5,7 @@ const features = require("../utils/features.js");
 
 //create product_Admin
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
-  const {
-    name,
-    description,
-    price,
-    discountPrice,
-    color,
-    images,
-    category,
-    stock,
-  } = req.body;
-
-  const product = await Product.create({
-    name,
-    description,
-    price,
-    discountPrice,
-    color,
-    images,
-    category,
-    stock,
-  });
-  
+  const product = await Product.create(req.body);
 
   res.status(201).json({
     success: true,

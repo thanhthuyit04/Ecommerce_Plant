@@ -10,6 +10,7 @@ const product = require("./routes/productRoute");
 const user = require("./routes/userRoute");
 const category = require("./routes/categoryRoute");
 const order = require("./routes/orderRoute");
+const blog = require("./routes/blogRoute");
 
 app.use("/api/v2",product);
 
@@ -18,6 +19,8 @@ app.use("/api/v2",user);
 app.use("/api/v2",category);
 
 app.use("/api/v2",order);
+
+app.use("/api/v2",blog);
 
 app.use(errorHandler);
 
